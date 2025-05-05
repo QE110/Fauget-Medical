@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fauget Medical</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3234b716ed.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/4.png" type="image/x-icon">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+    }
+    .btn-primary {
+      background-color: #0096dc;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #007bb5;
+    }
+    .btn-secondary {
+      background-color: #ff5722;
+      color: #fff;
+      border: none;
+    }
+    .btn-secondary:hover {
+      background-color: #e64a19;
+    }
+    .navbar {
+      background-color: #0096dc;
+    }
+    .navbar a {
+      color: #fff;
+      font-weight: 500;
+    }
+    .navbar a:hover {
+      color: #ffd8b0;
+    }
+    footer {
+      background-color: #006494;
+      color: #fff;
+    }
+    footer a {
+      color: #ffd8b0;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="images/4.png" alt="Fauget Medical" width="50"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#doctors" class="nav-link">Doctors</a></li>
+        <li class="nav-item"><a href="#appointments" class="nav-link">Appointments</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+        <li class="nav-item"><a href="login.html" class="nav-link btn btn-secondary ms-2">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="home" class="bg-light text-center py-5">
+  <div class="container">
+    <small class="text-muted">Welcome To Fauget Clinic</small>
+    <h1 class="display-5 mt-3">We Provide <span class="text-primary">Medical</span> Services You Can Trust!</h1>
+    <p class="lead mt-3">Need professional medical services? Our support staff will answer your questions. Visit us now or book online!</p>
+    <a href="#appointments" class="btn btn-primary mt-3">Make an Appointment</a>
+    <a href="#contact" class="btn btn-secondary mt-3">Contact Us</a>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container text-center">
+    <h2>We Offer Different Services To Improve Your Health</h2>
+    <div class="row mt-4 align-items-center">
+      <div class="col-md-6">
+        <h3>Who We Are</h3>
+        <p>We take health care personally at MedStar Hospital. Excellence in health care is about more than just medicine, technology, tests, and treatments. It’s about really caring for people with dignity and respect.</p>
+        <ul class="list-unstyled">
+          <li><i class="fa-solid fa-circle-check text-primary"></i> Professional Staff</li>
+          <li><i class="fa-solid fa-circle-check text-primary"></i> Latest Equipment</li>
+          <li><i class="fa-solid fa-circle-check text-primary"></i> Emergency Services</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <img src="images/room.jfif" alt="about" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Doctors Section -->
+<section id="doctors" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2>Meet Our Experienced Doctors</h2>
+    <div class="row g-4 mt-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/doctor 2.jpg" class="card-img-top" alt="Dr. Ibrahim">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Ibrahim Mohammed</h5>
+            <p class="card-text text-primary">Cardiologist</p>
+            <a href="#" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/doctor 1.jfif" class="card-img-top" alt="Dr. Mustafa">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Mustafa Kamal</h5>
+            <p class="card-text text-primary">Dermatologist</p>
+            <a href="#" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/doctor 3.jpg" class="card-img-top" alt="Dr. Omer">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Omer Khalid</h5>
+            <p class="card-text text-primary">Surgeon</p>
+            <a href="#" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment Section -->
+<section id="appointments" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>We Are Always Ready To Help You</h2>
+      <p class="lead">Book an appointment today</p>
+    </div>
+    <div class="row align-items-center g-5">
+      
+      <!-- Form Side -->
+      <div class="col-md-6">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="col-md-6">
+            <input type="tel" class="form-control" placeholder="Your Phone" required>
+          </div>
+          <div class="col-md-6">
+            <select class="form-select" required>
+              <option selected disabled>Choose Department</option>
+              <option>Dermatologist</option>
+              <option>Surgery</option>
+              <option>Cardiologist</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <select class="form-select" required>
+              <option selected disabled>Choose Doctor</option>
+              <option>Dr. Ibrahim Mohammed</option>
+              <option>Dr. Mustafa Kamal</option>
+              <option>Dr. Omer Khalid</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <input type="date" class="form-control" required>
+          </div>
+          <div class="col-12">
+            <textarea class="form-control" rows="4" placeholder="Write your message here..."></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary w-50">Book Appointment</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Image Side -->
+      <div class="col-md-6">
+        <img src="images/contact.jpg" alt="Appointments Image" class="img-fluid rounded">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact-us" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>Contact Us</h2>
+      <p class="lead">Have any questions? We'd love to hear from you!</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h5>Get in Touch</h5>
+        <p><i class="fa-solid fa-location-dot text-primary"></i> Maadi St 9 , Cairo, Egypt</p>
+        <p><i class="fa-solid fa-envelope text-primary"></i> Fauget.medical.eg@gmail.com</p>
+        <p><i class="fa-solid fa-phone text-primary"></i> +20 112 1345 332</p>
+        <div class="mt-3">
+          <a href="#" class="btn btn-primary btn-sm me-2"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="btn btn-primary btn-sm me-2"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="btn btn-primary btn-sm me-2"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="btn btn-primary btn-sm"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="py-5">
+  <div class="container text-center">
+    <p>&copy; 2025 Fauget Medical | Made by <a href="#">Qorashi Emad</a></p>
+  </div>
+</footer>
+
+<!-- Login / Register Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="modalTitle" class="modal-title">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Login Form -->
+        <form id="loginForm">
+          <div class="mb-3">
+            <input type="text" id="loginUsername" class="form-control" placeholder="Username" required>
+          </div>
+          <div class="mb-3">
+            <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
+          </div>
+          <button type="submit" class="btn btn-success w-100 mb-3">Login</button>
+          <p class="text-center">Don't have an account? <a href="#" onclick="showRegister()">Sign Up</a></p>
+        </form>
+
+        <!-- Register Form -->
+        <form id="registerForm" style="display: none;">
+          <div class="mb-3">
+            <input type="text" id="regUsername" class="form-control" placeholder="Username" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" id="regEmail" class="form-control" placeholder="Email" required>
+          </div>
+          <div class="mb-3">
+            <input type="tel" id="regPhone" class="form-control" placeholder="Phone" required>
+          </div>
+          <div class="mb-3">
+            <input type="password" id="regPassword" class="form-control" placeholder="Password" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mb-3">Register</button>
+          <p class="text-center">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript to Switch Forms -->
+<script>
+  function showRegister() {
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('registerForm').style.display = 'block';
+    document.getElementById('modalTitle').innerText = 'Sign Up';
+  }
+
+  function showLogin() {
+    document.getElementById('registerForm').style.display = 'none';
+    document.getElementById('loginForm').style.display = 'block';
+    document.getElementById('modalTitle').innerText = 'Login';
+  }
+</script>
+
+</body>
+</html>
