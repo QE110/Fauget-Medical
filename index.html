@@ -57,6 +57,22 @@
     footer a {
       color: #ffd8b0;
     }
+    #success-popup {
+    display: none;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-top: 15px;
+    animation: fadeIn 0.3s ease-in-out;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
   </style>
 
 </head>
@@ -164,7 +180,7 @@
       
       <!-- Form Side -->
       <div class="col-md-6">
-        <form class="row g-3">
+        <form class="row g-3" onsubmit="bookAppointment(event)">
           <div class="col-md-6">
             <input type="text" class="form-control" placeholder="Your Name" required>
           </div>
@@ -198,6 +214,10 @@
           </div>
           <div class="col-12">
             <button type="submit" class="btn btn-primary w-50">Book Appointment</button>
+          </div>
+          <!-- الرسالة المنبثقة -->
+          <div id="success-popup" style="display: none; padding: 10px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; margin-top: 15px;">
+                Appointment Booked Successfully!
           </div>
         </form>
       </div>
@@ -306,6 +326,19 @@
 
 <!-- JavaScript to Switch Forms -->
 <script>
+  function bookAppointment(event) {
+    event.preventDefault(); // تمنع الفورم من التحديث التلقائي
+
+    // عرض الرسالة المنبثقة
+    const popup = document.getElementById("success-popup");
+    popup.style.display = "block";
+
+    // تخفيها بعد 5 ثواني
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 5000);
+  }
+
   function showRegister() {
     document.getElementById('loginForm').style.display = 'none';
     document.getElementById('registerForm').style.display = 'block';
