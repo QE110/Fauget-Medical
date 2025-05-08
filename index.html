@@ -328,7 +328,7 @@
 <script>
   function bookAppointment(event) {
     event.preventDefault(); // تمنع الفورم من التحديث التلقائي
-
+    console.log("bookAppointment called");
     // عرض الرسالة المنبثقة
     const popup = document.getElementById("success-popup");
     popup.style.display = "block";
