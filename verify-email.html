@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verify Email - Fauget Medical</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f4f8fb;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .verify-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 450px;
+    }
+    .btn-primary {
+      background-color: #0096dc;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #007bb5;
+    }
+    .form-label {
+      font-weight: 500;
+    }
+    .alert {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="verify-card">
+    <h4 class="mb-4 text-center text-primary">Verify Your Email</h4>
+    <p class="text-center text-muted mb-4">Enter the 6-digit code we sent to your email to verify your account.</p>
+    
+    <div class="alert alert-danger" id="errorAlert">Incorrect verification code.</div>
+    <div class="alert alert-success" id="successAlert">Email verified successfully!</div>
+
+    <form id="verifyForm">
+      <div class="mb-3">
+        <label for="code" class="form-label">Verification Code</label>
+        <input type="text" class="form-control" id="code" placeholder="e.g. 123456" required>
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Verify Email</button>
+      </div>
+    </form>
+
+    <div class="text-center mt-3">
+      <small class="text-muted">Didn't receive the code?</small><br>
+      <a href="#" class="text-decoration-none text-secondary">Resend Code</a><br>
+      <a href="login.html" class="text-decoration-none text-secondary mt-2 d-inline-block">Back to Login</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    const correctCode = "123456"; // الكود المؤقت الصحيح
+
+    document.getElementById("verifyForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const userCode = document.getElementById("code").value.trim();
+      const successAlert = document.getElementById("successAlert");
+      const errorAlert = document.getElementById("errorAlert");
+
+      successAlert.style.display = "none";
+      errorAlert.style.display = "none";
+
+      if (userCode === correctCode) {
+        successAlert.style.display = "block";
+        // هنا ممكن تحول المستخدم لصفحة تانية
+        setTimeout(() => {
+          window.location.href = "login.html"; // أو dashboard.html حسب ما عايز
+        }, 1500);
+      } else {
+        errorAlert.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
